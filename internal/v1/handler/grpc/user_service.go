@@ -3,6 +3,7 @@ package grpc
 import (
 	"context"
 	"errors"
+	"log"
 
 	pb "github.com/mineryreport/flexicar/gen"
 	interfaces "github.com/mineryreport/flexicar/internal/v1"
@@ -45,6 +46,13 @@ func (srv *UserServStruct) Read(ctx context.Context, req *pb.SingleUserRequest) 
       }
   return srv.transformUserModel(user), nil
 }
+
+func (srv *UserServStruct) Update(ctx context.Context, req *pb.UpdateUserRequest) (*pb.SuccessResponse, error) {
+  log.Fatalf("Non Implemented Method User.Update")
+  return &pb.SuccessResponse{
+  }, nil
+}
+
 
 
 
